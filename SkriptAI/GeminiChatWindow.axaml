@@ -1,0 +1,46 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        x:Class="SkriptAI.GeminiChatWindow"
+        Title="Gemini AI Chat"
+        Width="500" Height="600"
+        Background="#181A20"
+        TransparencyLevelHint="AcrylicBlur, Blur, Transparent"
+        SystemDecorations="BorderOnly"
+        CornerRadius="12">
+    <DockPanel Margin="0">
+        <!-- Chat History -->
+        <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto" Background="Transparent" Margin="0,0,0,0">
+            <StackPanel Name="ChatHistoryPanel" Margin="16,16,16,8" Spacing="8"/>
+        </ScrollViewer>
+        <!-- Input Area -->
+        <Border DockPanel.Dock="Bottom" Background="#23242B" Padding="16" CornerRadius="0,0,12,12">
+            <StackPanel Orientation="Horizontal" Spacing="8" VerticalAlignment="Bottom">
+                <TextBox Name="InputTextBox"
+                         Width="360"
+                         Height="40"
+                         Background="#23242B"
+                         Foreground="#fff"
+                         BorderBrush="#333"
+                         CornerRadius="8"
+                         FontSize="16"
+                         Padding="12,0"
+                         Watermark="Type your message..."/>
+                <Button Name="SendButton"
+                        Content="Send"
+                        Width="80"
+                        Height="40"
+                        Background="#60cdff"
+                        Foreground="#181A20"
+                        FontWeight="Bold"
+                        CornerRadius="8"
+                        FontSize="16"
+                        HorizontalAlignment="Right"/>
+            </StackPanel>
+        </Border>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Spacing="12" Margin="0,0,0,8">
+            <Button Name="ExplainButton" Content="Explain Selection" Width="150" Height="36" Background="#333" Foreground="#fff" CornerRadius="8"/>
+            <Button Name="InsertButton" Content="Insert AI Suggestion" Width="170" Height="36" Background="#333" Foreground="#fff" CornerRadius="8"/>
+            <Button Name="RefactorButton" Content="Refactor Selection" Width="150" Height="36" Background="#333" Foreground="#fff" CornerRadius="8"/>
+        </StackPanel>
+    </DockPanel>
+</Window> 
